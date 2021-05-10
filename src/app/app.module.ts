@@ -9,6 +9,8 @@ import { SupplierComponent } from './supplier/supplier.component';
 import { ParentComponent } from './parent/parent.component';
 import { EnfantComponent } from './enfant/enfant.component';
 import { EnfanttComponent } from './enfantt/enfantt.component';
+import { TestComponent } from './test/test.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { EnfanttComponent } from './enfantt/enfantt.component';
     SupplierComponent,
     ParentComponent,
     EnfantComponent,
-    EnfanttComponent
+    EnfanttComponent,
+    TestComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

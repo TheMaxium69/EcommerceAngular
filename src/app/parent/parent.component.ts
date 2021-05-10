@@ -15,7 +15,7 @@ export class ParentComponent implements OnInit {
   }
 
   receiveMessage(param: string): void{
-    console.log('Parent, message reçu: ', param)
+    console.log('Parent, message reçu: ', param);
     this.childText += param;
   }
 
