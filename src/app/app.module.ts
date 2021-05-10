@@ -11,6 +11,7 @@ import { EnfantComponent } from './enfant/enfant.component';
 import { EnfanttComponent } from './enfantt/enfantt.component';
 import { TestComponent } from './test/test.component';
 import {HttpClientModule} from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {HttpClientModule} from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
