@@ -20,6 +20,13 @@
          type="text"/>
 </form>
 
+<ul *ngIf="formSubmited">
+  <li *ngIf="ourform.controls['name']?.errors?.required">First name is required please</li>
+  <li *ngIf="ourform.controls['category']?.errors?.required">Last name is required please</li>
+  <li *ngIf="ourform.controls['description']?.errors?.required">Email is required please</li>
+  <li *ngIf="ourform.controls['price']?.errors?.email">Email is not correct</li>
+</ul>
+
 <form [formGroup]="ourform" (ngSubmit)="addClient()">
   <button type="submit">Add</button>
 </form>

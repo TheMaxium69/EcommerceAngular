@@ -37,6 +37,7 @@ export class TestComponent implements OnInit {
 
 
   addClient(): void {
+    //this.formSubmited = true;
     console.log(this.ourform.value);
     this.ps.add(this.ourform.value).subscribe(v => console.log(v));
     this.ourform.reset();
