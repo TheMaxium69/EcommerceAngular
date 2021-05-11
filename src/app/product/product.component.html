@@ -1,2 +1,12 @@
-<h3>{{prod.category}}: {{prod.name}}</h3>
-<p>{{prod.description}}</p>
+<!--{{tab.name}}-->
+
+<p>debug - list entiere</p>
+<ul>
+  <li *ngFor="let f of users">
+    <p>{{f.id}} - {{f.name}} - {{f.category}} - {{f.price}} - {{f.promo}} - {{f.active}} - {{f.description}}</p>
+  </li>
+</ul>
+
+<p>list des arcticle</p>
+<li *ngFor="let f of users"><a [routerLink]="['/client', f.id]">{{f.name}}</a></li>
+

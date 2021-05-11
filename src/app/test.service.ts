@@ -29,7 +29,7 @@ export class TestService {
     return this.http.get<Product[]>(this.apiUrl);
   }
 
-  findOne(id: number): Observable<Product> {
+  findOne(id: string | null): Observable<Product> {
     return this.http.get<Product>(this.apiUrl + '/' + id);
   }
   //constructor(private http: HttpClient) { }

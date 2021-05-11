@@ -14,11 +14,15 @@ import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
+import { ClientComponent } from './client/client.component';
+
 
 const routes: Routes = [
-  { path: 'home', component: MenuComponent },
+  { path: 'home', component: SupplierComponent   },
   { path: 'art', component: ParentComponent },
   { path: 'test', component: TestComponent },
+  { path: 'prod', component: ProductComponent},
+  { path: 'client/:id', component: ClientComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   //{ path: '**', component: ParentComponent }
 ];
@@ -33,7 +37,8 @@ const routes: Routes = [
     ParentComponent,
     EnfantComponent,
     EnfanttComponent,
-    TestComponent
+    TestComponent,
+    ClientComponent
   ],
   imports: [
     BrowserModule,
