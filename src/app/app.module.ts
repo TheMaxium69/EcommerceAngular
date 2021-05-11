@@ -12,6 +12,7 @@ import { EnfanttComponent } from './enfantt/enfantt.component';
 import { TestComponent } from './test/test.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {ReactiveFormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
