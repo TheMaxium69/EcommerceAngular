@@ -12,7 +12,16 @@ import { EnfanttComponent } from './enfantt/enfantt.component';
 import { TestComponent } from './test/test.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
-import {RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
+import {AppRoutingModule} from './app-routing.module';
+
+const routes: Routes = [
+  { path: 'home', component: MenuComponent },
+  { path: 'art', component: ParentComponent },
+  { path: 'test', component: TestComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  //{ path: '**', component: ParentComponent }
+];
 
 @NgModule({
   declarations: [
@@ -30,9 +39,15 @@ import {RouterModule} from '@angular/router';
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule.forRoot(routes),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+
+
+export class AppModule {
+
+}
